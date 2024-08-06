@@ -16,13 +16,13 @@ public class Menu {
         String titulo = "Lab01: Introducción al lenguaje Java";
 
         // *** AJUSTAR LOS MENSAJES QUE HAN DE APARECER EN EL MENU ***
-        String opciones[] = {"Calculadora consola", "Calculadora gráfica (Swing)"};
+        String opciones[] = {"Calculadora consola", "Calculadora gráfica (Swing)", "otra opcion"};
 
         final int numop = opciones.length;
 
         // Crear el marco de la ventana
         frame = new JFrame(titulo);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        //frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         //frame.setLocationRelativeTo(null);
         frame.setSize(400, 50 * numop);
         frame.setLayout(new BorderLayout());
@@ -48,6 +48,8 @@ public class Menu {
                         case 1:
                             botones[index].setEnabled(!botones[index].isEnabled());
                             new CalculadoraGrafica().setVisible(true);
+                        case 2:
+                            System.out.println("Tercera opcion");
                     }
                     // *** FINAL AJUSTES ***
                 }
